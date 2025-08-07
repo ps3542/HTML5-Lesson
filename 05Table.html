@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표 관련 태그</title>
+</head>
+<body>
+  <h1>표 관련 태그</h1>
+  <h2>3 x 4 (성적처리결과)표</h2>
+  <table border="2" width="55%" cellspacing="0">
+    <!-- %로 입력하면 가변크기로 입력 - 브라우저 크기에 따라 크기가 달라짐 -->
+    <tr height="35">
+      <th>이름</th>
+      <th>국어</th>
+      <th>영어</th>
+      <th>수학</th>
+    </tr>
+    <tr height="35" align="center">
+    <td>토르</td>
+    <td>12</td>
+    <td>100</td>
+    <td>79</td>
+    </tr>
+    
+    <tr height="35" align="center">
+    <td>묠니르</td>
+    <td>23</td>
+    <td>87</td>
+    <td>55</td>  
+    </tr>
+    
+    <tr height="35" align="center">
+    <td>로키</td>
+    <td>90</td>
+    <td>49</td>
+    <td>35</td>
+    </tr>
+  </table>
+
+  <h2>표 체계적으로 관리</h2>
+    <table border="2" width="55%" cellspacing="0">
+    <!-- %로 입력하면 가변크기로 입력 - 브라우저 크기에 따라 크기가 달라짐 -->
+    <thead><tr height="35">
+      <th>이름</th>
+      <th>국어</th>
+      <th>영어</th>
+      <th>수학</th>
+    </tr></thead>
+    <tbody>
+    <tr height="35" align="center">
+    <td>토르</td>
+    <td>12</td>
+    <td>100</td>
+    <td>79</td>
+    </tr>
+    
+    <tr height="35" align="center">
+    <td>묠니르</td>
+    <td>23</td>
+    <td>87</td>
+    <td>55</td>  
+    </tr>
+    
+    <tr height="35" align="center">
+    <td>로키</td>
+    <td>90</td>
+    <td>49</td>
+    <td>35</td>
+    </tr></tbody>
+    <tfoot>
+      <tr height="35" align="center">
+    <th>집계</th>
+    <td>125</td>
+    <td>236</td>
+    <td>169</td>
+    </tr>
+    </tfoot>
+  </table>
+
+  <h2>행과 열 합치기 - colspan, rowspan</h2>
+  <table border="1" width="800" cellspacing="0">
+    <caption><b>요안도라 객실</b></caption>
+  <thead align="center"><tr bgcolor="silver">
+    <th width="200">방 이름</th>
+    <th width="200">대상</th>
+    <th width="200">크기</th>
+    <th>가격</th></tr>
+  </thead>
+    <tbody align="center"><tr>
+      <td>유채방</td>
+      <td>여성 도미토리</td>
+      <td rowspan="3">4인실</td>
+      <td rowspan="4">1인 20,000원</td>
+    </tr>
+  <tr>
+    <td rowspan="2">동백방</td>
+    <td>동성 도미토리</td>   
+  </tr>
+  <tr>
+    <td>가족 1팀</td>    
+  </tr>
+  <tr>
+    <td>천혜향방</td>
+    <td>-</td>
+    <td>2인실</td> 
+  </tr> </tbody>
+  <tfoot>
+    <th colspan="4" align="center" bgcolor="silver">바깥채 전체를 렌트합니다.</th>
+  </tfoot>
+  </table> <br>
+  
+  <h2>상품 구성</h2>
+  <table border="1" width="550" cellspacing="0">
+    <caption><b>선물용과 가정용 상품 구성</b></caption>
+    <thead align="center" bgcolor="white">
+      <th>용도</th>
+      <th>중량</th>
+      <th>개수</th>
+      <th>가격</th>
+    </thead>
+    <tbody align="center">
+      <tr>
+        <td>선물용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000원</td>
+      </tr>
+      <tr>
+        <td>선물용</td>
+        <td>5kg</td>
+        <td>18~26과</td>
+        <td>52,000원</td>
+      </tr>
+      <tr>
+        <td>가정용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>30,000원</td>
+      </tr>
+      <tr>
+        <td>가정용</td>
+        <td>5kg</td>
+        <td>18~26과</td>
+        <td>47,000원</td>
+      </tr>
+    </tbody>
+
+  </table> <br>
+
+   <h2>개별 열 디자인하기 -col, colgroup</h2>
+  <table border="1" width="800" cellspacing="0">
+    <caption><b>요안도라 객실</b></caption>
+    <colgroup>
+      <col style="width: 200px;">
+      <col style="width: 200px;">
+      <col style="width: 200px;">
+      <col>
+    </colgroup>
+  <thead align="center"><tr bgcolor="silver">
+    <th>방 이름</th>
+    <th>대상</th>
+    <th>크기</th>
+    <th>가격</th></tr>
+  </thead>
+    <tbody align="center"><tr>
+      <td>유채방</td>
+      <td>여성 도미토리</td>
+      <td rowspan="3">4인실</td>
+      <td rowspan="4">1인 20,000원</td>
+    </tr>
+  <tr>
+    <td rowspan="2">동백방</td>
+    <td>동성 도미토리</td>   
+  </tr>
+  <tr>
+    <td>가족 1팀</td>    
+  </tr>
+  <tr>
+    <td>천혜향방</td>
+    <td>-</td>
+    <td>2인실</td> 
+  </tr> </tbody>
+  <tfoot>
+    <th colspan="4" align="center" bgcolor="silver">바깥채 전체를 렌트합니다.</th>
+  </tfoot>
+  </table>
+  
+</body>
+</html>
